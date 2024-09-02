@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienzähler</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Kalorienzähler</h1>
+        
+        <div class="row mb-3">
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="mealName" placeholder="Geben Sie den Menü-Namen ein">
+            </div>
+            <div class="col-md-5">
+                <input type="number" class="form-control" id="calories" placeholder="Geben Sie die Kalorienanzahl ein">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-success btn-block" onclick="addMeal()">Speichern</button>
+            </div>
+        </div>
+
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Menü</th>
+                    <th>Kalorien</th>
+                    <th>Löschen</th>
+                </tr>
+            </thead>
+            <tbody id="mealsTableBody">
+                <!-- Die Menüs werden hier dynamisch hinzugefügt -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="totalCalories">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p class="text-center">Verfolgen Sie Ihre Kalorien 🍔</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+</body>
+</html>
